@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Please insert serial number: "
+read serial_number
+printf "Your serial number is: %d \n" $serial_number
