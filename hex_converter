@@ -2,3 +2,23 @@
 echo "Please insert serial number: "
 read serial_number
 printf "Your serial number is: %d \n" $serial_number
+
+#convert to hexadecimal
+serial_number_hexa=$(printf '%x\n' $serial_number)
+printf "Your hexa serial number is: %s \n" $serial_number_hexa
+
+#string size
+size=${#serial_number_hexa}
+printf "Your hexa size is: %s \n" $size
+
+
+#if size ==1
+write only one
+...
+
+#first two values
+#A=$(printf '%s' $serial_number_hexa | cut -c 1)
+#B=$(printf '%s' $serial_number_hexa | cut -c 2)
+#C=$(printf '%s' $serial_number_hexa | cut -c 3)
+D=$(printf '%s' $serial_number_hexa | cut -c $size-1)
+printf "Hexa is: %s%s%s%s\n" $D
